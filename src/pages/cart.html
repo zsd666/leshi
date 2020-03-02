@@ -6,6 +6,87 @@
     <title>Document</title>
 </head>
 <body>
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery-Tab选项卡</title>
+    <style>
+            * {
+                padding: 0;
+                margin: 0;
+            }
     
+            .box {
+                width: 400px;
+                height: 500px;
+                border: 1px solid #000;
+                margin: 50px auto;
+            }
+    
+            .list>li {
+                list-style: none;
+                float: left;
+                background-color: orange;
+                text-align: center;
+                width: 100px;
+                height: 50px;
+                line-height: 50px;
+    
+            }
+    
+            .content>li {
+                list-style: none;
+                background-color: aqua;
+                display: none;
+            }
+    
+            .list>.showlist {
+                background-color: darkgrey;
+            }
+            .content>.showcontent{
+                display: block;
+            }
+        </style>
+    <script src="../lib/jquery/dist/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $(".list>li").mouseenter(function(){
+                //1.获取鼠标移入的对象并让当前对象显示
+                $(this).addClass("showlist");
+                //2.获取当前对象的所有同级的其余元素集合，并隐藏
+                $(this).siblings().removeClass("showlist");
+                //3.获取当前li元素的索引
+                var $index=$(this).index();
+                //4.获取对应的ul中的li元素对象
+                var $eq=$(".content>li").eq($index);
+                //5.设置当前li元素可见
+                $eq.addClass("showcontent");
+                //6.获取当前对象的所有同级元素的集合，并隐藏
+                $eq.siblings().removeClass("showcontent");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="box">
+        <ul class="list">
+            <li class="showlist">H5+CSS3</li>
+            <li>C语言</li>
+            <li>java</li>
+            <li>go语言</li>
+        </ul>
+        <ul class="content">
+            <li class="showcontent">HTML5+CSS3从入门到精通</li>
+            <li>C语言从入门到精通</li>
+            <li>java从入门到精通</li>
+            <li>go语言从入门到精通</li>
+        </ul>
+    </div>
+</body>
+<script src="../lib/jquery/dist/jquery.min.js"></script>
+</html>
 </body>
 </html>

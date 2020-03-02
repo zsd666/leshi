@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="http://at.alicdn.com/t/font_1558021_2v3bskim1zv.css">
   <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/swiper.min.css">
 </head>
 <body style="height: 2000px;">
     <!-- 顶部banner -->
@@ -148,7 +149,7 @@
                   
                 </li>
               </ul>
-              <div class="menu-content-wrap">
+              <div class="menu-content-wrap" style="overflow: hidden;display: none;">
                 <!-- 菜单一 -->
                 <div class="menu-content-box clearfix" style="display: none;">
                   <ul class="menu-list list-width-222 menu-type-1">
@@ -1028,7 +1029,7 @@
                 </div>
                 <!-- 菜单四end -->
                 <!-- 菜单五 -->
-                <div class="menu-content-box">
+                <div class="menu-content-box" style="display: none;">
                   <ul class="menu-list list-width-220 menu-type-3">
                    <li>
                     <a href="#">
@@ -1081,9 +1082,387 @@
         
       </div>
     </div>
+    <!-- 轮播图 -->
+    <div class="section">
+      <div class="main-message-container">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide slide-1">
+              <div class="full preload middle" style="position: absolute; top: 0; height: 460px;"><img src="../images/md.jpg" class="swiper-lazy"></div>
+            </div>
+            <div class="swiper-slide slide-2">
+              <div class="full preload middle" style="position: absolute; top: 0; height: 460px;"><img src="../images/md.jpg" class="swiper-lazy"></div>
+            </div>
+            <div class="swiper-slide slide-3">
+              <div class="full preload middle" style="position: absolute; top: 0; height: 460px;"><img src="../images/md.jpg" class="swiper-lazy"></div>
+            </div>
+            <div class="swiper-slide slide-4">
+              <div class="full preload middle" ><img src="../images/md.jpg" class="swiper-lazy"></div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev swiper-button-white"></div><!--左箭头-->
+          <div class="swiper-button-next swiper-button-white"></div><!--右箭头-->
+        </div>
+      </div>
+    <!-- 轮播图完成 -->
+    <!-- 用户信息/商城资讯 -->
+    <div class="area-center positon-container">
+      <div class="user-news-container">
+        <div class="user-news-wrap">
+          <div class="user-box">
+            <div class="logout-wrap">
+              <div class="user-headimg">
+                <img src="../images/default.jpg" alt="">
+              </div>
+              <div class="user-title">Hi, 您好</div>
+              <div class="user-desc">欢迎来到乐视商城</div>
+              <div class="user-btn">
+                <a href="login.html" class="login-entry">
+                  <strong>登录</strong>
+                </a>
+                <a href="login.html" class="register-entry">
+                  <strong>注册</strong>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="news-box">
+            <div class="clearfix news-header">
+              <span class="more">
+                <a href="#">更多</a>
+              </span>
+              <strong class="news-title">
+                商城资讯
+              </strong>
+            </div> 
+            <ul class="news-list">
+              <li>
+                <a href="#">
+                  【资讯】挂架适配机型明细
+                </a>
+              </li>
+              <li>
+                <a href="#">【声明】防诈骗声明</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 用户信息/商城资讯 end-->
+    </div>
+    <!-- 广告位 -->
+    <div class="section">
+      <div class="area-center">
+       <div class="aisle-banner-container clearfix">
+         <div class="aisle-wrap">
+           <a href="#">
+             <img src="../images/20190524.jpg" alt="">
+           </a>
+         </div>
+         <ul class="banner-wrap clearfix">
+           <li>
+             <a href="#">
+               <img src="../images/201900.jpg" alt="">
+             </a>
+           </li>
+           <li>
+             <a href="#">
+               <img src="../images/202001.jpg" alt="">
+             </a>
+           </li>
+           <li>
+             <a href="#">
+               <img src="../images/202002.jpg" alt="">
+             </a>
+           </li>
+           <li>
+             <a href="#">
+               <img src="../images/202003.jpg" alt="">
+             </a>
+           </li>
+         </ul>
+       </div>
+      </div>
+    </div>
+    <!-- 广告位  end-->
 
+    <!-- 限时购 -->
+    <div class="reduced-price section" style="display: block;">
+      <div class="area-center">
+        <div class="promotion-container">
+          <div class="area-header-wrap clearfix">
+            <div class="area-title clearfix">
+              <strong class="title">生活惠</strong>
+            </div>
+            <div class="clearfix area-more">
+              <span class="more">
+                <a href="#">更多 »</a>
+              </span>
+            </div>
+          </div>
+          <ul class="clearfix product-list">
+            <li>
+              <div class="product-pic">
+                <a href="#">
+                  <img src="../images/qw.jpg" alt="">
+                </a>
+              </div>
+              <div class="product-type">
+                <strong>飞科（FLYCO） FS336电动剃须刀</strong>
+              </div>
+              <div class="product-price">
+                <strong class="present">
+                  ￥<span>189</span>
+                </strong>
+                <em class="original">￥<span>229</span></em>
+              </div>
+              <div class="product-btn">
+                <strong>
+                  <a href="#">立即购买</a>
+                </strong>
+              </div>
+            </li>
+            <li>
+              <div class="product-pic">
+                <a href="#">
+                  <img src="../images/we.jpg" alt="">
+                </a>
+              </div>
+              <div class="product-type">
+                <strong>山水玻璃电热水壶SK-1882G</strong>
+              </div>
+              <div class="product-price">
+                <strong class="present">
+                  ￥<span>¥99</span>
+                </strong>
+                <em class="original">￥<span>229</span></em>
+              </div>
+              <div class="product-btn">
+                <strong>
+                  <a href="#">立即购买</a>
+                </strong>
+              </div>
+            </li>
+            <li>
+              <div class="product-pic">
+                <a href="#">
+                  <img src="../images/ewq.jpg" alt="">
+                </a>
+              </div>
+              <div class="product-type">
+                <strong>山水智能加热破壁机SJ-5212</strong>
+              </div>
+              <div class="product-price">
+                <strong class="present">
+                  ￥<span>399</span>
+                </strong>
+                <em class="original">￥<span>229</span></em>
+              </div>
+              <div class="product-btn">
+                <strong>
+                  <a href="#">立即购买</a>
+                </strong>
+              </div>
+            </li>
+            <li>
+              <div class="product-pic">
+                <a href="#">
+                  <img src="../images/anmo.jpg" alt="">
+                </a>
+              </div>
+              <div class="product-type">
+                <strong>三和松石 电动养生按摩器SH-B100（充电版</strong>
+              </div>
+              <div class="product-price">
+                <strong class="present">
+                  ￥<span>189</span>
+                </strong>
+                <em class="original">￥<span>¥199</span></em>
+              </div>
+              <div class="product-btn">
+                <strong>
+                  <a href="#">立即购买</a>
+                </strong>
+              </div>
+            </li>
+            <li class="end">
+              <div class="product-pic">
+                <a href="#">
+                  <img src="../images/dog.jpg" alt="">
+                </a>
+              </div>
+              <div class="product-type">
+                <strong>小狗 D-807干湿吹多用吸尘器</strong>
+              </div>
+              <div class="product-price">
+                <strong class="present">
+                  ￥<span>369</span>
+                </strong>
+                <em class="original">￥<span>429</span></em>
+              </div>
+              <div class="product-btn">
+                <strong>
+                  <a href="#">立即购买</a>
+                </strong>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- 限时购 end -->
+    <!-- 超级电视板块 -->
+    <div class="section">
+      <div class="area-center">
+        <div class="clearfix area-header-wrap">
+          <div class="clearfix area-title">
+            <strong class="title">超级电视</strong>
+            <i class="gap"></i>
+            <span>运营家庭美好生活</span>
+          </div>
+          <ul class="clearfix area-type-select">
+            <li><a href="#">40吋</a></li>
+            <li class="gap"></li>
+            <li><a href="#">50吋</a></li>
+            <li class="gap"></li>
+            <li><a href="#">55吋</a></li>
+            <li class="gap"></li>
+            <li><a href="#">65吋</a></li>
+            <li class="gap"></li>
+            <li><a href="#">更多选择 »</a></li>
+          </ul>
+        </div>
+        <div class="clearfix area-list-type-01">
+          <ul class="clearfix product-list">
+            <li class="banner-592x372">
+              <a href="#"><img src="../images/azd.jpg" alt=""></a>
+            </li>
+            <li>
+              <div class="product-label">
+                <span style="background-color:#3ece17">新品</span>
+                <span style="background-color:#f2a705">热卖</span>
+              </div>
+              <div class="product-pic"><a href="#"><img src="../images/zxc.jpg" alt=""></a></div>
+              <div class="product-type"><strong>Y32底座版</strong></div>
+              <p class="product-desc">1GB+8GB大存储|全网海量资源|真人工智能系统</p>
+              <div class="product-price">
+                <strong class="present">¥<span>899</span></strong>
+                <em class="original">¥<span>999</span></em>
+              </div>
+              <div class="product-btn">
+                <strong>
+                  <a href="#" class="know">了解产品</a>
+                  <a href="#" class="buy">立即购买</a>
+                </strong>
+              </div>
+            </li>
+            <li>
+              <div class="product-label">
+                <span style="background-color:#3ece17">新品</span>
+                <span style="background-color:#f2a705">直降700</span>
+              </div>
+              <div class="product-pic"><a href="#"><img src="../images/sa.jpg" alt=""></a></div>
+              <div class="product-type"><strong>超5 X50底座版</strong></div>
+              <p class="product-desc">金属超薄机身丨2GB+16GB大存储</p>
+              <div class="product-price">
+                <strong class="present">¥<span>3299</span></strong>
+                <em class="original">¥<span>3999</span></em>
+              </div>
+              <div class="product-btn">
+                <strong>
+                  <a href="#" class="know">了解产品</a>
+                  <a href="#" class="buy">立即购买</a>
+                </strong>
+              </div>
+            </li>
+            <li>
+              <div class="product-label">
+                <span style="background-color:#3ece17">以旧换新</span>
+                <span style="background-color:#f2a705">直降500</span>
+              </div>
+              <div class="product-pic"><a href="#"><img src="../images/sb.jpg" alt=""></a></div>
+              <div class="product-type"><strong>X55L底座版</strong></div>
+              <p class="product-desc">Mstar四核处理器 | 4K HDR超高清</p>
+              <div class="product-price">
+                <strong class="present">¥<span>2899</span></strong>
+                <em class="original">¥<span>3399</span></em>
+              </div>
+              <div class="product-btn">
+                <strong>
+                  <a href="#" class="know">了解产品</a>
+                  <a href="#" class="buy">立即购买</a>
+                </strong>
+              </div>
+            </li>
+            <li>
+              <div class="product-label">
+                <span style="background-color:#3ece17">爆款</span>
+                <span style="background-color:#f2a705">直降1000</span>
+              </div>
+              <div class="product-pic"><a href="#"><img src="../images/sc.jpg" alt=""></a></div>
+              <div class="product-type"><strong>X40C底座版</strong></div>
+              <p class="product-desc">超清降噪引擎丨BT709 100%色域覆盖</p>
+              <div class="product-price">
+                <strong class="present">¥<span>1299</span></strong>
+                <em class="original">¥<span>2299</span></em>
+              </div>
+              <div class="product-btn">
+                <strong>
+                  <a href="#" class="know">了解产品</a>
+                  <a href="#" class="buy">立即购买</a>
+                </strong>
+              </div>
+            </li>
+            <li>
+              <div class="product-label">
+                <span style="background-color:#3ece17">以旧换新</span>
+                <span style="background-color:#f2a705">爆款</span>
+              </div>
+              <div class="product-pic"><a href="#"><img src="../images/sd.jpg" alt=""></a></div>
+              <div class="product-type"><strong>X50 Pro底座版</strong></div>
+              <p class="product-desc">Mstar 4核处理器 | 16GB闪存</p>
+              <div class="product-price">
+                <strong class="present">¥<span>2199</span></strong>
+                <em class="original">¥<span>2599</span></em>
+              </div>
+              <div class="product-btn">
+                <strong>
+                  <a href="#" class="know">了解产品</a>
+                  <a href="#" class="buy">立即购买</a>
+                </strong>
+              </div>
+            </li>
+            <li>
+              <div class="product-label">
+                <span style="background-color:#3ece17">热卖</span>
+                <span style="background-color:#f2a705">直降500</span>
+              </div>
+              <div class="product-pic"><a href="#"><img src="../images/zer.jpg" alt=""></a></div>
+              <div class="product-type"><strong>Zero65漫威版</strong></div>
+              <p class="product-desc">专属定制漫威元素|3GB+16GB大存储</p>
+              <div class="product-price">
+                <strong class="present">¥<span>7499</span></strong>
+                <em class="original">¥<span>7999</span></em>
+              </div>
+              <div class="product-btn">
+                <strong>
+                  <a href="#" class="know">了解产品</a>
+                  <a href="#" class="buy">立即购买</a>
+                </strong>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- 超级电视板块 end-->
+
+    <!-- 精选配件 s -->
   <script src="../lib/jquery/dist/jquery.min.js"></script>
   <script src="../js/index.js"></script>
   <script src="../lib/swiper/js/swiper.min.js"></script>
+  <script src="../js/lunbo.js"></script>
 </body>
 </html>

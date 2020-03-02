@@ -1,7 +1,7 @@
 body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0} 
 body{font:12px "宋体","Arial Narrow",HELVETICA;background:#fff;}
 a{color:#172c45;text-decoration:none;cursor: pointer;} 
-a:hover{color:#2884c7;} 
+a:hover{text-decoration: none;} 
 em{font-style:normal}
 li{list-style:none}
 img{border:0;vertical-align:middle} 
@@ -377,4 +377,540 @@ p{word-wrap:break-word}
 }
 .menu-select-btn li.active{
     background-color: #2884c7;
+}
+.main-message-container{
+    margin: 0 0 12px;
+    height: 420px;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style: none;
+}
+
+html, body {
+	position: relative;
+	height: 100%;
+}
+
+img {
+	display: block;
+}
+
+body {
+	background: #eee;
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	color: #000;
+	margin: 0;
+	padding: 0;
+}
+
+.pcHidden {
+	display: none;
+}
+
+header {
+	position: absolute;
+	width: 100%;
+	height: 60px;
+	left: 0;
+	top: 0;
+	z-index: 30;
+	background: rgba(255,255,255,.7);
+}
+
+header ul li {
+	padding: 0 20px;
+	border-right: 1px solid #fff;
+	float: left;
+	line-height: 60px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.swiper-container {
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-container .swiper-pagination {
+	left: 30px;
+	bottom: 20px !important;
+	width: auto;
+}
+
+.swiper-container .swiper-slide {
+	position: relative;
+	overflow: hidden;
+}
+
+.swiper-pagination-bullet {
+	width: 10px;
+	height: 10px;
+	background: none;
+	border: 1px solid #fff;
+	opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+	background: #fff;
+}
+
+.full {
+	position: absolute;
+}
+
+.full img {
+	width: 100%;
+}
+
+.swiper-slide{
+    position: absolute;
+     top: 0; 
+     height: 600px;
+}
+
+.homepage-left100 {
+	width: 100%;
+	position: absolute;
+	left: 100%;
+	top: 44%;
+	z-index: 10;
+	transform: translate(-50%, -50%);
+}
+
+.homepage-left100 .txt {
+	text-transform: uppercase;
+	font-size: 48px;
+	letter-spacing: 16px;
+	line-height: 72px;
+}
+footer {
+	width: 100%;
+	height: 70px;
+	position: absolute;
+	bottom: 0;
+	background: #fff;
+	z-index: 30;
+	line-height: 70px;
+	text-indent: 30px;
+}
+
+@media  only screen and (max-width:768px) {
+	header,footer {
+		position: static;
+	}
+
+	.swiper-container {
+		height: auto;
+	}
+
+	.swiper-button-prev,.swiper-button-next,header ul li:not(:first-child) {
+		display: none;
+	}
+
+	.homepage-left100 .txt {
+		font-size: 24px;
+		letter-spacing: 8px;
+		line-height: 36px;
+	}
+
+	.txtCenter .txt {
+		font-size: 60px;
+		letter-spacing: 0;
+		line-height: 55px;
+	}
+
+	.swiper-container .swiper-pagination {
+		bottom: 10px;
+	}
+
+	.pcHidden {
+		display: block;
+	}
+}	
+.full{
+    top: 0;
+}
+.full,.preload,.middle{
+    height: 460px !important;
+    top: 0 !important;
+}
+.full img{
+    width: 100%;
+    height: 100%;
+}
+.menu-wrap{
+    position: absolute;
+    top: -7px;
+    left: 0px;
+}
+.positon-container{
+    position: relative;
+    height: 0;
+    content: '.';
+    display: block;
+}
+.user-news-container{
+    position: absolute;
+    top: -412px;
+    right: 0;
+    z-index: 1000;
+}
+.user-news-wrap{
+    width: 238px;
+    height: 380px;
+    padding: 24px 0 0;
+    background-color: #fffffff2;
+}
+.user-box{
+    height: 168px;
+}
+.user-box .logout-wrap{
+    text-align: center;
+}
+.user-headimg img{
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    border: 1px solid #e6e6e6;
+    border-radius: 50%;
+}
+.user-title{
+    padding: 5px 0 0;
+}
+.user-desc{
+    padding: 2px 0 0;
+    color: #999;
+}
+.user-btn{
+    padding: 9px 0 24px;
+}
+.user-btn a{
+    display: inline-block;
+    width: 98px;
+    height: 32px;
+    line-height: 32px;
+    margin: 0 5px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+.login-entry{
+    color: #fff;
+    background-color: #2884c7;
+}
+.register-entry{
+    color: #333;
+    background-color: #e6e6e6;
+}
+.news-box{
+    margin: 0 6px;
+    border-top: 1px solid #e6e6e6;
+}
+.news-header{
+    padding: 20px 8px 0;
+}
+.more{
+    float: right;
+    line-height: 20px;
+    font-family: Arial;
+}
+.more a{
+    color: #999;
+}
+.news-title{
+    float: left;
+    font-size: 14px;
+}
+.news-list{
+    padding: 5px 1px 0;
+}
+.news-list li{
+    line-height: 24px;
+    padding: 0 0 1px;
+    color: #2884c7;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.aisle-banner-container{
+    margin-bottom: 24px;
+}
+.aisle-wrap{
+    float: left;
+    width: 196px;
+    height: 140px;
+    overflow: hidden;
+}
+.aisle-banner-container .aisle-wrap img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.banner-wrap{
+    float: right;
+}
+.banner-wrap li{
+    width: 238px;
+    height: 140px;
+    float: left;
+    margin-left: 12px;
+    overflow: hidden;
+}
+.aisle-banner-container .banner-wrap li img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    vertical-align: middle;
+}
+.reduced-price .promotion-container{
+    background: none;
+    border: 0;
+    padding: 8px 0 0;
+    margin-bottom: 32px;
+}
+.promotion-container .area-header-wrap{
+    border-bottom: 1px solid #f2f2f2;
+    padding: 0;
+}
+.section .area-center .area-header-wrap .area-title{
+    float: left;
+    line-height: 1;
+    padding: 0 0 11px;
+}
+.section .area-center .area-header-wrap .area-title .title{
+    float: left;
+    font-size: 20px;
+}
+.section .area-center .area-header-wrap .area-more{
+    float: right;
+    font-size: 14px;
+    line-height: 24px;
+}
+.reduced-price .promotion-container ul.product-list{
+    width: 1193px;
+    margin: 0 auto;
+}
+.reduced-price .promotion-container ul.product-list li{
+    width: 229px;
+    background: #fff;
+    margin: 0 12px 0 0;
+    float: left;
+    height: 298px;
+    padding: 24px 0 0;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+.promotion-container ul.product-list li .product-pic{
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.promotion-container ul.product-list li .product-pic img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: transform 300ms linear;
+    transform: scale(1);
+}
+.promotion-container ul.product-list li .product-type{
+    height: 16px;
+    font-size: 14px;
+    line-height: 1;
+    padding: 7px 0 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.promotion-container ul.product-list li .product-price{
+    font-size: 16px;
+    padding: 8px 0 0;
+}
+.promotion-container ul.product-list li .product-price .present{
+    color: #ed1c24;
+    padding: 0 8px;
+}
+.promotion-container ul.product-list li .product-price .original{
+    color:#999;
+    text-decoration:line-through;
+    padding:0 8px;
+}
+.promotion-container ul.product-list li .product-btn{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 20px;
+    text-align: center;
+}
+.promotion-container ul.product-list li .product-btn a{
+    display: block;
+    width: 98px;
+    height: 32px;
+    line-height: 32px;
+    background-color: #ed1c24;
+    border-radius: 5px;
+    font-size: 12px;
+    margin: 16px auto 0;
+    color: #fff;
+    cursor: pointer;
+}
+.reduced-price .promotion-container ul.product-list li.end{
+    margin: 0;
+}
+.section .area-center .area-header-wrap .area-title{
+    float: left;
+    line-height: 1;
+    padding: 0 0 11px;
+}
+.section .area-center .area-header-wrap .area-title .title{
+    float: left;
+    font-size: 20px;
+}
+.section .area-center .area-header-wrap .area-title .gap{
+    float: left;
+    width: 2px;
+    height: 18px;
+    margin: 1px 16px 0 15px;
+    background-color: #333;
+}
+.section .area-center .area-header-wrap .area-title .desc{
+    float: left;
+    font-size: 14px;
+    line-height: 20px;
+}
+.section .area-center .area-header-wrap .area-type-select{
+    float: right;
+    font-size: 14px;
+}
+.section .area-center .area-header-wrap .area-type-select li{
+    float: left;
+}
+.section .area-center .area-header-wrap .area-type-select li.gap{
+    width: 1px;
+    height: 14px;
+    margin: 3px 16px 0 15px;
+    background-color: #333;
+}
+.area-list-type-01{
+    margin: 0 0 20px -12px;
+}
+.area-list-type-01 .product-list li{
+    width: 290px;
+    height: 372px;
+    float: left;
+    margin: 0 0 12px 12px;
+    text-align: center;
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+}
+.area-list-type-01 .product-list li.banner-592x372{
+    width: 592px;
+    height: 372px;
+    float: left;
+    margin: 0 0 0 12px;
+    overflow: hidden;
+}
+.area-list-type-01 .product-list li.banner-592x372 img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+.area-list-type-01 .product-list li .product-label{
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+.area-list-type-01 .product-list li .product-label span{
+    display: inline-block;
+    width: 72px;
+    height: 20px;
+    line-height: 20px;
+    color: #fff;
+    border-radius: 2px;
+    margin: 0 2px;
+}
+.area-list-type-01 .product-list li .product-pic{
+    width: 230px;
+    height: 230px;
+    margin: 24px auto 0;
+    overflow: hidden;
+}
+.area-list-type-01 .product-list li:hover .product-pic img{
+    transform: scale(1.04);
+}
+.area-list-type-01 .product-list li .product-pic img{
+    display: block;
+    vertical-align: middle;
+    transition: transform 300ms linear;
+    transform: scale(1);
+    width: 100%;
+    height: 100%;
+}
+.area-list-type-01 .product-list li .product-type{
+    height: 16px;
+    font-size: 14px;
+    line-height: 1;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.area-list-type-01 .product-list li .product-desc{
+    color: #999;
+    padding: 3px 0 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.area-list-type-01 .product-list li .product-price{
+    font-size: 16px;
+    padding: 9px 0 0;
+}
+.area-list-type-01 .product-list li:hover .product-price{
+    display: none;
+}
+.area-list-type-01 .product-list li .product-price .present{
+    color: #ed1c24;
+    padding: 0 8px;
+}
+.area-list-type-01 .product-list li .product-price .original{
+    color: #999;
+    text-decoration: line-through;
+    padding: 0 8px;
+}
+.area-list-type-01 .product-list li .product-btn{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    transition: transform 300ms linear;
+    transform: translateY(33px);
+}
+.area-list-type-01 .product-list li:hover .product-btn{
+    transform: translateY(-32px);
+}
+.area-list-type-01 .product-list li .product-btn a{
+    display: inline-block;
+    width: 98px;
+    height: 32px;
+    line-height: 32px;
+    color: #fff;
+    border-radius: 5px;
+    margin: 0 8px;
+}
+.area-list-type-01 .product-list li .product-btn a.know{
+    background-color: #2884c7;
+}
+.area-list-type-01 .product-list li .product-btn a.buy{
+    background-color: #ed1c24;
 }

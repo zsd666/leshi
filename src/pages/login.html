@@ -5,23 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="../lib/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
-    <ul>
-        <li class="a">d</li>
-        <li>b</li>
-        <li>v</li>
-        <li>b</li>
-        <li>a</li>
-        <span>ccc</span>
-    </ul>
-<script>
-   $('ul').on('click','li',function(e){
-       console.log($(this))
-   })
-</script>
+ 
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slide-1">
+            <div class="full preload middle"><img src="../images/md.jpg" class="swiper-lazy"><div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div></div>
+          </div>
+          <div class="swiper-slide slide-2">
+            <div class="homepage-left100"><span class="txt">Why<br>All The<br> Baggage?</span></div>
+            <div class="full preload middle"><img src="../images/md.jpg" class="swiper-lazy"><div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div></div>
+          </div>
+          <div class="swiper-slide slide-3">
+            <div class="txtCenter"><span class="txt">the DAM<br>tRUth</span></div>
+            <div class="full preload middle"><img src="../images/md.jpg" class="swiper-lazy"><div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div></div>
+          </div>
+          <div class="swiper-slide slide-4">
+            <div class="whiteTxt"><span class="txt">Our mussels cultivate<br>a cleaner ocean.</span></div>
+            <div class="full preload middle"><img src="../images/md.jpg" class="swiper-lazy"><div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div></div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev swiper-button-white"></div><!--左箭头-->
+        <div class="swiper-button-next swiper-button-white"></div><!--右箭头-->
+      </div>
+      <div class="pcHidden" style="line-height:500px; text-align:center;">ohter content</div>
+      <footer>your footer</footer>
 
-
+      <script src="../lib/jquery/dist/jquery.min.js"></script>
+      <script src="../js/index.js"></script>
+      <script src="../lib/swiper/js/swiper.min.js"></script>
 
 </body>
 </html>
+<script>
+var swiper = new Swiper('.swiper-container', {
+    loop: true,
+lazy: {
+        //loadPrevNext: true,
+    },
+navigation: {
+  nextEl: '.swiper-button-next',
+  prevEl: '.swiper-button-prev',
+},
+pagination: {
+  el: '.swiper-pagination',
+},
+});
+//0.625   5/8
+function homeResize() {
+
+  WinHeight = $(window).height();
+  WinWidth = $(window).width();
+  fullBox = $(".swiper-slide .full");
+
+  if (WinWidth > 768) {
+    if (WinWidth / WinHeight > 1.6) {
+      fullBox.width("100%").height(WinWidth * 0.625).css({
+      "position": 'absolute',
+        "left": "0px",
+        "top": (WinHeight - fullBox.height()) / 2 + "px"
+      });
+    } else {
+      fullBox.width(WinHeight * 1.6).height("100%").css({
+      "position": 'absolute',
+        "left": "-" + (fullBox.width() - WinWidth) / 2 + "px",
+        "top": "0px"
+      });
+    }
+  } else {
+    fullBox.width("100%").height("auto").css({
+      "position": 'static',
+    });
+  }
+}
+
+homeResize();
+
+$(window).resize(function() {
+  homeResize();
+});
+</script>
