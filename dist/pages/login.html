@@ -1,1 +1,53 @@
-<!DOCTYPE html><html lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Document</title><script src=../lib/jquery/dist/jquery.min.js></script><link rel=stylesheet href=../css/swiper.min.css><link rel=stylesheet href=../css/index.css></head><body><div class=swiper-container><div class=swiper-wrapper><div class="swiper-slide slide-1"><div class="full preload middle"><img src=../images/md.jpg class=swiper-lazy><div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div></div></div><div class="swiper-slide slide-2"><div class=homepage-left100><span class=txt>Why<br>All The<br>Baggage?</span></div><div class="full preload middle"><img src=../images/md.jpg class=swiper-lazy><div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div></div></div><div class="swiper-slide slide-3"><div class=txtCenter><span class=txt>the DAM<br>tRUth</span></div><div class="full preload middle"><img src=../images/md.jpg class=swiper-lazy><div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div></div></div><div class="swiper-slide slide-4"><div class=whiteTxt><span class=txt>Our mussels cultivate<br>a cleaner ocean.</span></div><div class="full preload middle"><img src=../images/md.jpg class=swiper-lazy><div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div></div></div></div><div class=swiper-pagination></div><div class="swiper-button-prev swiper-button-white"></div><div class="swiper-button-next swiper-button-white"></div></div><div class=pcHidden style=line-height:500px;text-align:center>ohter content</div><footer>your footer</footer><script src=../lib/jquery/dist/jquery.min.js></script><script src=../js/index.js></script><script src=../lib/swiper/js/swiper.min.js></script></body></html><script>var swiper=new Swiper(".swiper-container",{loop:!0,lazy:{},navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"},pagination:{el:".swiper-pagination"}});function homeResize(){WinHeight=$(window).height(),WinWidth=$(window).width(),fullBox=$(".swiper-slide .full"),768<WinWidth?1.6<WinWidth/WinHeight?fullBox.width("100%").height(.625*WinWidth).css({position:"absolute",left:"0px",top:(WinHeight-fullBox.height())/2+"px"}):fullBox.width(1.6*WinHeight).height("100%").css({position:"absolute",left:"-"+(fullBox.width()-WinWidth)/2+"px",top:"0px"}):fullBox.width("100%").height("auto").css({position:"static"})}homeResize(),$(window).resize(function(){homeResize()})</script>
+<!DOCTYPE html><html lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="ie=edge"><title>Document</title><link rel=stylesheet href=../css/style.css><script src=../js/cookie.js></script><script src=../css/style.css></script><script src=../js/form.js></script><script src=../js/ajax.js></script></head><body><div class=form style=position:relative><div class=form_register style=position:absolute><form class=form3><h1>注册表单</h1><div class=form_item><label for=username>用户名：</label> <input type=text class=unames name=usernames id=username placeholder=请输入用户名 required></div><div class=form_item><label for=password>密码：</label> <input type=password class=pwds name=passwords id=password placeholder=请输入密码名 required></div><div class=form_item><label for=email>电子邮箱：</label> <input type=email name=email id=email placeholder=请输入电子邮件 required></div><div class=form_item><label for=tel>电话：</label> <input type=tel name=tel id=tel placeholder=请输入手机号码 required></div><div class=form_item><input type=submit value=注册></div></form><div class=info>已有账号？点击<span class="switch login_Btn">登录</span></div></div><div class=form_login style=height:0><form class=form2><h1>登录表单</h1><div class=form_item><label for=username>用户名：</label> <input type=text class=username name=username id=username placeholder=请输入用户名 required></div><div class=form_item><label for=password>密码：</label> <input type=password class=password name=password id=password placeholder=请输入密码名 required></div><div class=form_item><input type=submit value=登录></div></form><div class=info>没有账号？点击<span class="switch register_Btn">注册账号</span></div></div></div></body></html><script>// 0. 获取元素
+    var nameInp = document.querySelector('.username')
+	var passInp = document.querySelector('.password')
+	var nameOnp = document.querySelector('.unames')
+    var passOnp = document.querySelector('.pwds')
+    var errorInfo = document.querySelector('span')
+
+    // 1. 绑定事件
+	var form = document.querySelector('.form2')
+	var form1 = document.querySelector('.form3')
+	// console.log(nameInp,passInp,form)
+	form1.onsubmit=function(e){
+		e=e||window.event
+		e.preventDefault()
+
+		var unames=nameOnp.value
+		var upwds=passOnp.value
+
+		console.log(unames,upwds)
+		getSend('/zhuce',function(res){
+			console.log(res)
+		},`usernames=${unames}&passwords=${upwds}`)
+	}
+
+
+
+
+
+
+    // 1-1. 绑定表单提交事件{
+	form.onsubmit=function(e){
+		e=e||window.event
+		e.preventDefault()
+
+		var uname=nameInp.value
+		var upass=passInp.value
+		console.log(uname,upass)
+		if(!uname||!upass){
+			alert("请完整填写表单")
+			return
+		}
+		postSend('/login',function(res){
+			var result=JSON.parse(res)
+			console.log(result)
+			if (result.code==0) {
+				errorInfo.style.display="block"
+			}else{
+				setCookie('login',1,30)
+				window.location.href='index.html'
+			}
+			
+		},`username=${uname}&password=${upass}`)
+	}</script>

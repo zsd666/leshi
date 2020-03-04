@@ -1,1 +1,1 @@
-"use strict";
+"use strict";new GridScrollFx(document.getElementById("grid"),{viewportFactor:.4});

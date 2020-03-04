@@ -1,77 +1,123 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Bootstrap响应式登录注册表单代码</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!--图标库-->
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css'>
-
-<!--响应式框架-->
-<link rel='stylesheet' href='../css/bootstrap.min.css'>
-
-<!--主要样式-->
-<link rel="stylesheet" href="../css/style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+	
+    <link rel="stylesheet" href="../css/style.css">
+	<script src="../js/cookie.js"></script>
+	<script src="../css/style.css"></script>
+    <script src="../js/form.js"></script>
+	<script src="../js/ajax.js"></script>
 </head>
 <body>
-  
-<div class="container">
-
-	<div class="card-wrap">
-	
-		<div class="card border-0 shadow card--welcome is-show" id="welcome">
-			<div class="card-body">
-				<h2 class="card-title">从这里出发，开启生态世界</h2>
-				<div style="width: 120px;"><img src="../images/leshi.png" alt="" style="width: 100%;"></div>
-				<div class="btn-wrap"><a class="btn btn-lg btn-register js-btn" data-target="register">注册</a><a class="btn btn-lg btn-login js-btn" data-target="login">登录</a></div>
-			</div>
-		</div>
+    <div class="form" style="position:relative">
 		
-		<div class="card border-0 shadow card--register" id="register">
-			<div class="card-body">
-				<h2 class="card-title">会员注册</h2>
-				<p class="card-text">第三方注册</p>
-				<p class="badge-wrap"><a class="badge"><i class="fab fa-facebook-f"></i></a><a class="badge"><i class="fab fa-google"></i></a><a class="badge"><i class="fab fa-twitter"></i></a><a class="badge"><i class="fab fa-github"></i></a></p>
-				<p>或者使用您的电子邮箱进行注册</p>
-				<form>
-					<div class="form-group">
-						<input class="form-control" type="text" placeholder="帐号" required="required">
-					</div>
-					<div class="form-group">
-						<input class="form-control" type="password" placeholder="密码" required="required">
-					</div>
-					<button class="btn btn-lg">注册</button>
-				</form>
-			</div>
-			<button class="btn btn-back js-btn" data-target="welcome"><i class="fas fa-angle-left"></i></button>
-		</div>
+		<!--注册表单-->
+        <div class="form_register" style="position:absolute">  
+            <form class="form3">
+                <h1>注册表单</h1>
+                <div class="form_item">
+                    <label for="username">用户名：</label>
+                    <input type="text" class="unames" name="usernames" id="username" placeholder="请输入用户名" required >
+                </div>
+                <div class="form_item">
+                    <label for="password">密码：</label>
+                    <input type="password" class="pwds" name="passwords" id="password" placeholder="请输入密码名" required>
+                </div>
+                <div class="form_item">
+                    <label for="email">电子邮箱：</label>
+                    <input type="email" name="email" id="email" placeholder="请输入电子邮件" required>
+                </div>
+                <div class="form_item">
+                    <label for="tel">电话：</label>
+                    <input type="tel" name="tel" id="tel" placeholder="请输入手机号码" required>
+                </div>
+                <div class="form_item">
+                    <input type="submit" value="注册">
+                </div>
+            </form>
+            <div class="info">已有账号？点击<span class="switch login_Btn">登录</span></div>
+        </div>
 		
-		<div class="card border-0 shadow card--login" id="login">
-			<div class="card-body">
-				<h2 class="card-title">欢迎登录！</h2>
-				<p>第三方登录</p>
-				<p class="badge-wrap"><a class="badge"><i class="fab fa-facebook-f"></i></a><a class="badge"><i class="fab fa-google"></i></a><a class="badge"><i class="fab fa-twitter"></i></a><a class="badge"><i class="fab fa-github"></i></a></p>
-				<form>
-					<div class="form-group">
-						<input class="form-control" type="text" placeholder="帐号" required="required">
-					</div>
-					<div class="form-group">
-						<input class="form-control" type="password" placeholder="密码" required="required">
-					</div>
-					<p><a href="#">忘记密码?</a></p>
-					<button class="btn btn-lg">登录</button>
-				</form>
-			</div>
-			<button class="btn btn-back js-btn" data-target="welcome"><i class="fas fa-angle-left"></i></button>
-		</div>
-		
-	</div>
-	
-</div>
-  
-<script src="../js/login.js"></script>
-
+		<!--登录表单-->
+        <div class="form_login" style="height:0;">
+			
+			<form class="form2">
+				<h1>登录表单</h1>
+				<div class="form_item">
+					<label for="username">用户名：</label>
+					<input type="text" class="username" name="username" id="username" placeholder="请输入用户名" required>
+				</div>
+				<div class="form_item">
+					<label for="password">密码：</label>
+					<input type="password" class="password" name="password" id="password" placeholder="请输入密码名" required>
+				</div>
+				<div class="form_item">
+					<input type="submit" value="登录">
+				</div>
+			</form>
+			<div class="info">没有账号？点击<span class="switch register_Btn">注册账号</span></div>
+			
+         </div>
+        
+    </div>
 </body>
 </html>
+ <script>
+    // 0. 获取元素
+    var nameInp = document.querySelector('.username')
+	var passInp = document.querySelector('.password')
+	var nameOnp = document.querySelector('.unames')
+    var passOnp = document.querySelector('.pwds')
+    var errorInfo = document.querySelector('span')
+
+    // 1. 绑定事件
+	var form = document.querySelector('.form2')
+	var form1 = document.querySelector('.form3')
+	// console.log(nameInp,passInp,form)
+	form1.onsubmit=function(e){
+		e=e||window.event
+		e.preventDefault()
+
+		var unames=nameOnp.value
+		var upwds=passOnp.value
+
+		console.log(unames,upwds)
+		getSend('/zhuce',function(res){
+			console.log(res)
+		},`usernames=${unames}&passwords=${upwds}`)
+	}
+
+
+
+
+
+
+    // 1-1. 绑定表单提交事件{
+	form.onsubmit=function(e){
+		e=e||window.event
+		e.preventDefault()
+
+		var uname=nameInp.value
+		var upass=passInp.value
+		console.log(uname,upass)
+		if(!uname||!upass){
+			alert("请完整填写表单")
+			return
+		}
+		postSend('/login',function(res){
+			var result=JSON.parse(res)
+			console.log(result)
+			if (result.code==0) {
+				errorInfo.style.display="block"
+			}else{
+				setCookie('login',1,30)
+				window.location.href='index.html'
+			}
+			
+		},`username=${uname}&password=${upass}`)
+	}
+  </script>
