@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>商品列表</title>
     <link rel="stylesheet" href="../lib/pagination/pagination.css">
-    <script src="../lib/pagination/pagination.js"></script>
-    <script src="../lib/jquery/dist/jquery.min.js"></script>
     <link rel="stylesheet" href="http://at.alicdn.com/t/font_1558021_s7pa6fcty4.css">
     <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="../css/index.css">
@@ -17,7 +15,6 @@
     <link rel="stylesheet" href="../css/component.css">
     <script src="../lib/pubuliu/modernizr.custom.js"></script>
     <link rel="stylesheet" href="../css/list.css">
-    <script src="../js/list.js"></script>
 
 </head>
 <body>
@@ -145,80 +142,29 @@
       </div>
       <!-- 列表 -->
      <div class="container">
-        <div class="pagi m-style">
-
-        </div>
+      <div class="pagi m-style"></div>
 			<section class="grid-wrap">
-				<ul class="grid swipe-rotate" id="grid">
-					<li><a href="#"><img src="../images/dummy.png" alt="dummy"><h3>A fantastic title</h3></a></li>
-					<li><a href="#"><img src="../images/dummy.png" alt="dummy"><h3>A fantastic title</h3></a></li>
-					<li><a href="#"><img src="../images/dummy.png" alt="dummy"><h3>A fantastic title</h3></a></li>
-					<li><a href="#"><img src="../images/dummy.png" alt="dummy"><h3>A fantastic title</h3></a></li>
-					<li><a href="#"><img src="../images/dummy.png" alt="dummy"><h3>A fantastic title</h3></a></li>
-					<li><a href="#"><img src="../images/dummy.png" alt="dummy"><h3>A fantastic title</h3></a></li>
-					<li><a href="#"><img src="../images/dummy.png" alt="dummy"><h3>A fantastic title</h3></a></li>
-					<li><a href="#"><img src="../images/dummy.png" alt="dummy"><h3>A fantastic title</h3></a></li>
-					<li><a href="#"><img src="../images/dummy.png" alt="dummy"><h3>A fantastic title</h3></a></li>
-					<li><a href="#"><img src="../images/dummy.png" alt="dummy"><h3>A fantastic title</h3></a></li>
-					<li><a href="#"><img src="../images/dummy.png" alt="dummy"><h3>A fantastic title</h3></a></li>
-					<li><a href="#"><img src="../images/dummy.png" alt="dummy"><h3>A fantastic title</h3></a></li>
-					<li><a href="#"><img src="../images/dummy.png" alt="dummy"><h3>A fantastic title</h3></a></li>
-					<li><a href="#"><img src="../images/dummy.png" alt="dummy"><h3>A fantastic title</h3></a></li>
-					<li><a href="#"><img src="../images/dummy.png" alt="dummy"><h3>A fantastic title</h3></a></li>
-					<li><a href="#"><img src="../images/dummy.png" alt="dummy"><h3>A fantastic title</h3></a></li>
-					<li><a href="#"><img src="../images/dummy.png" alt="dummy"><h3>A fantastic title</h3></a></li>
-					<li><a href="#"><img src="../images/dummy.png" alt="dummy"><h3>A fantastic title</h3></a></li>
-					<li><a href="#"><img src="../images/dummy.png" alt="dummy"><h3>A fantastic title</h3></a></li>
-					<li><a href="#"><img src="../images/dummy.png" alt="dummy"><h3>A fantastic title</h3></a></li>
-					<li><a href="#"><img src="../images/dummy.png" alt="dummy"><h3>A fantastic title</h3></a></li>
-					<li><a href="#"><img src="../images/dummy.png" alt="dummy"><h3>A fantastic title</h3></a></li>
-					<li><a href="#"><img src="../images/dummy.png" alt="dummy"><h3>A fantastic title</h3></a></li>
-					<li><a href="#"><img src="../images/dummy.png" alt="dummy"><h3>A fantastic title</h3></a></li>
-					<li><a href="#"><img src="../images/dummy.png" alt="dummy"><h3>A fantastic title</h3></a></li>
-					<li><a href="#"><img src="../images/dummy.png" alt="dummy"><h3>A fantastic title</h3></a></li>
-					<li><a href="#"><img src="../images/dummy.png" alt="dummy"><h3>A fantastic title</h3></a></li>
-					<li><a href="#"><img src="../images/dummy.png" alt="dummy"><h3>A fantastic title</h3></a></li>
-					<li><a href="#"><img src="../images/dummy.png" alt="dummy"><h3>A fantastic title</h3></a></li>
-					<li><a href="#"><img src="../images/dummy.png" alt="dummy"><h3>A fantastic title</h3></a></li>
-					<li><a href="#"><img src="../images/dummy.png" alt="dummy"><h3>A fantastic title</h3></a></li>
-					<li><a href="#"><img src="../images/dummy.png" alt="dummy"><h3>A fantastic title</h3></a></li>
-					<li><a href="#"><img src="../images/dummy.png" alt="dummy"><h3>A fantastic title</h3></a></li>
-					<li><a href="#"><img src="../images/dummy.png" alt="dummy"><h3>A fantastic title</h3></a></li>
-					<li><a href="#"><img src="../images/dummy.png" alt="dummy"><h3>A fantastic title</h3></a></li>
-					<li><a href="#"><img src="../images/dummy.png" alt="dummy"><h3>A fantastic title</h3></a></li>
-					<li><a href="#"><img src="../images/dummy.png" alt="dummy"><h3>A fantastic title</h3></a></li>
-					<li><a href="#"><img src="../images/dummy.png" alt="dummy"><h3>A fantastic title</h3></a></li>
-					<li><a href="#"><img src="../images/dummy.png" alt="dummy"><h3>A fantastic title</h3></a></li>
-					<li><a href="#"><img src="../images/dummy.png" alt="dummy"><h3>A fantastic title</h3></a></li>
+				<ul class="grid swipe-rotate item" id="grid">
 				</ul>
 			</section>
 
         </div><!-- /container -->
+        
+  <script src="../lib/jquery/dist/jquery.min.js"></script>
+  <script src="../lib/pagination/pagination.js"></script>
+  <script src="../js/list.js"></script>
 </body>
-<script>
-    $('.pagi').pagination({
-      pageCount: 50, // 总页数
-      current: 1, // 当前页
-      jump: true,
-      coping: true,
-      homePage: '首页', // 首页按钮的文本
-      endPage: '末页', // 末页按钮的文本
-      prevContent: '上页',
-      nextContent: '下页',
-      callback: function (api) { // 当你切换页面的时候会触发
-        // api.getCurrent() 获取当前是第几页
-        console.log(api.getCurrent())
-      }
-    })
-</script>
+
 <script src="../lib/pubuliu/masonry.pkgd.min.js"></script>
 <script src="../lib/pubuliu/imagesloaded.pkgd.min.js"></script>
 <script src="../lib/pubuliu/classie.js"></script>
 <script src="../lib/pubuliu/colorfinder-1.1.js"></script>
 <script src="../lib/pubuliu/gridScrollFx.js"></script>
+
+
 </html>
 <script>
-    new GridScrollFx(document.getElementById( 'grid' ), {
-    viewportFactor : 0.4
+  new GridScrollFx(document.getElementById( 'grid' ), {
+  viewportFactor : 0.5
 } );
 </script>

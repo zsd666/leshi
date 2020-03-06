@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.switch-cart{
+    position: relative;
+    border-bottom: 3px solid skyblue;
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    align-items: center;
+}
+.switch-cart li{
+   height: 100%;
+   width: 150px;
+   display: flex;
+   align-items: center;
+   
+}
+.switch-cart span{
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100px;
+    height: 3px;
+    background-color: red;
+}
+.cart-table-th{
+    height: 50px;
+    line-height: 50px;
+    color: rgb(60, 60, 60);
+    overflow: hidden;
+}
+.th-item{
+    width: 342px;
+}
+.cart-table-th .th{
+    float: left;
+}
+.td-inner{
+    padding-left: 91px;
+}
+.shop-info{
+    position: relative;
+    z-index: 2;
+    line-height: 38px;
+    padding-left: 15px;
+    width: 100%;
+}
+.shop{
+    position: relative;
+    height: 38px;
+    background: rgb(255, 255, 255);
+    overflow: hidden;
+    border-bottom: 1px solid rgb(204, 204, 204);
+}
+.shopname{
+    margin-left: 20px;
+}
+.order-body{
+    margin-bottom: 15px;
+}
+.item-body{
+    display: flex;
+    align-items: center;
+    background-color: rgb(255, 255, 255); 
+}
+.info{
+    width: 80px;
+    height: 80px;
+    padding-left: 5px;
+}
+.msg{
+    width: 180px;
+
+}
+.check{
+    width: 50px;
+}
+.top p{
+    display: inline-block;
+    line-height: 50px;
+}
+.top{
+    width: 1200px;
+    height: 50px;
+}
+.top .p1{
+    margin-left: 100px;
+}
+.top .p2{
+    float: right;
+    padding-right: 100px;
+}
+.center img{
+    width: 80px;
+    height: 80px;
+}
+.select{
+    width: 1200px;
+    background: #fcfcfc;
+    border-bottom: 1px solid #ccc;
+    height: 120px;
+    display: flex;
+    align-items: center;
+}
+.selectOne{
+    width: 15px;
+    height: 15px;
+    display: block;
+    margin-right: 30px;
+    margin-left: 10px;
+}
+.name{
+    width: 200px;
+    margin-left: 20px;
+}
+.price{
+    margin-left: 330px;
+}
+.number{
+    margin-left: 80px;
+}
+.number input{
+    width: 40px;
+
+}
+.xiaoji{
+    margin-left: 70px;
+}
+.del{
+    margin-left: 100px;
+}
+.bottom{
+    background-color: #B0B0B0;
+    width: 1200px;
+    height: 50px;
+    margin-top: 6px;
+    line-height: 50px;
+}
+.bottom p{
+    display: inline-block;
+    float: right;
+    margin-right: 20px;
+    font-size: 16px;
+}
+.clear{
+    float: left;
+    width: 78px;
+    height: 50px;
+}
+.pay{
+    width: 100px;
+    height: 50px;
+    float: right;
+    margin-left: 40px;
+    background-color: #f40;
+    border-radius: 2px;
+    color: #f3f3f3;
+    font-size: 16px;
+}
+.colr{
+    color: #f40;
+}
+.cart{
+    border: 1px solid #B0B0B0; 
+}
+.shops{
+    font-size: 16px;
+    color: skyblue;
+}
+.dizhi{
+    float: right;
+    font-weight: normal;
+}
